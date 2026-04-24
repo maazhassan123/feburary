@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,9 +161,12 @@
     const messages = [
       "",
       "Are you sure...? 🥺",
+      "Think it again","Consider it again",
       "Really really sure? 💔",
+      
       "Last chance... 🐻",
       "You can't escape! 😂"
+
     ];
 
     // Floating hearts background
@@ -189,15 +193,15 @@
 
       subText.textContent = messages[Math.min(noCount, messages.length - 1)];
 
-      if (noCount <= 3) {
+      if (noCount <= 6) {
         yesFontSize += 6;
-        yesPadV     += 0.2;
-        yesPadH     += 0.5;
+        yesPadV     += 0.6;
+        yesPadH     += 0.8;
         yesBtn.style.fontSize = yesFontSize + 'px';
         yesBtn.style.padding  = yesPadV + 'rem ' + yesPadH + 'rem';
       }
 
-      if (noCount >= 4) {
+      if (noCount >=6) {
         moving = true;
         noBtn.style.position = 'fixed';
         noBtn.style.transition = 'none';
@@ -222,7 +226,7 @@
         <div class="result">
           <div style="font-size:90px; animation: bounce 1.5s ease-in-out infinite;">🥰</div>
           <div class="result-msg">Yes, I was sure!</div>
-          <div class="result-sub">You just made this bear the happiest bear alive 🐻❤️</div>
+          <div class="result-sub">You just made this boy the happiest boy alive 🐻❤️</div>
         </div>
       `;
     }
